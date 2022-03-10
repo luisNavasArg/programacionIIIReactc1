@@ -1,23 +1,21 @@
 import logo from './logo.svg';
 import './App.css';
-
+import Hola from './components/Hola'
+import Footer from './components/Footer'
+import Veterinaria from './components/clase5/Veterinaria';
+import Perritos from './components/clase5/db/Perritos';
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    
+    <div className="container">
+      <div className='row'>
+      <Veterinaria perritos={Perritos}/>
+      </div>
+      {/* <Hola color="red" key="1" nombre="Felicitas" apellido="Herrera"/>
+      <Hola color="beige" nombre="Juan"/>
+      <Hola color="yellow" nombre="Pedro"/>
+      <Footer color="green"/> */}
+      
     </div>
   );
 }
